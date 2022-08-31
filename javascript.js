@@ -1,5 +1,5 @@
 const gridContainer = document.querySelector("#gridContainer");
-const pageHome = document.querySelector("#bodyView");
+const colorSpace = document.querySelector("#color");
 /*const gridUnit = document.createElement("div");*/
 function gridCreate(quant) {
     const gridnumber = quant*quant; 
@@ -18,10 +18,31 @@ function gridCreate(quant) {
 }
 
 function changecolor() {
-    $everyGrid.style.backgroundColor = "black";
+    everyGrid.style.backgroundColor = "black";
 }
 const gridLength = prompt("Enter side length of grid");
 gridCreate(gridLength);
 
-const $everyGrids = document.querySelectorAll(".unit");
-$everyGrids.forEach($everyGrid => $everyGrid.addEventListener("click", changecolor()))
+const units = document.querySelectorAll(".unit");
+units.forEach(unit => unit.addEventListener("click", function(){
+    unit.style.backgroundColor = "black";
+}))
+
+const colorPick = document.createElement("button");
+colorPick.textContent = "Color Choice";
+colorPick.style.marginTop = "15px";
+colorSpace.appendChild(colorPick);
+
+function userColorChoice() { 
+    const userchoice = prompt("Please type color");
+    const units = document.querySelectorAll(".unit");
+    units.forEach(unit => unit.addEventListener("click", function(){
+    unit.style.backgroundColor = userchoice;}))
+}
+
+colorPick.addEventListener("click", function (){
+    const userchoice = prompt("Please type color");
+    const units = document.querySelectorAll(".unit");
+    units.forEach(unit => unit.addEventListener("click", function(){
+    unit.style.backgroundColor = userchoice;}))
+})
