@@ -1,5 +1,42 @@
-#gridContainer {
-    background-color: gray;
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.appTitle { 
+    background-color: white;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    border-radius: 25px;
+    font-size: 24px;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+#gridContainer { 
+    box-shadow: 2px 2px 2px gray;
+    width: 40%;
+    aspect-ratio: 1/1;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    margin: auto;
+}
+#controlPanel{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+#resetColor{
+    width: 100px;
+    height: 30px;
+    font-size: 18px;
+}
+
+#userColorChoice { 
+    width: 100px;
+    height: 30px;
 }
