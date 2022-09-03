@@ -9,20 +9,21 @@ document.getElementById("userColorChoice").addEventListener('change', colorUpdat
 document.getElementById("resetColor").addEventListener('click', updateCanvas);
 
 //Functions
+// attempt at hoverclick
+let mouseup = true; 
+canvas.addEventListener("mousedown", function(){mouseup = false});
+canvas.addEventListener("mouseup", function(){mouseup = true});
 
-//Change Div Background Color
-
-function changeColor(){
-    
-}
+//    | see below
+//    \/
 
 // Returns colorChoice
+
 function colorUpdate(){
     colorChoice = document.getElementById("userColorChoice").value;
     const pixels = document.querySelectorAll(".pixel");
-    pixels.forEach(pixel => pixel.addEventListener("click", function(){
-    pixel.style.backgroundColor = colorChoice;}))
-}
+    pixels.forEach(pixel => pixel.addEventListener("mouseover", function(){
+        if (mouseup === false){pixel.style.backgroundColor = colorChoice;}}))}
 
 // Returns sidePixelNumber
 function valueUpdate(){
@@ -73,11 +74,3 @@ function canvasClear(){
 }
 
 populateCanvas();
-
-// individual pixel size = gridlength/sidePixelNumber//
-/* const pixels = document.querySelectorAll(".pixel");
-    pixels.forEach(unit => unit.addEventListener("click", function(){
-        unit.style.backgroundColor = colorUpdate;
-    }));
-} */
-
