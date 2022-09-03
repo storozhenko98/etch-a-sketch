@@ -1,4 +1,3 @@
-// document.getElementById("mydiv").offsetWidth //
 const gridLength = document.getElementById("gridContainer").offsetWidth;
 const sidePixelNumber = document.getElementById("pixelSize").value;
 const colorChoice = document.getElementById("userColorChoice").value; 
