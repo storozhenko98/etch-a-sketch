@@ -16,7 +16,7 @@
 
 #gridContainer { 
     display: flex;
-    width: 50%;
+    width: 30%;
     aspect-ratio: 1/1;
     margin: auto;
     flex-wrap: wrap;
@@ -43,5 +43,5 @@
 }
 
 #pixelSize { 
-    width: 100px;
+    width: 150px;
 }
