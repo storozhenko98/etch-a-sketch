@@ -13,6 +13,7 @@ function populateCanvas(gridLength, sidePixelNumber){
         pixelDiv.style.backgroundColor = "black";
         pixelDiv.style.display = "block";
         pixelDiv.style.margin = 0 +"px";
+        pixelDiv.style.borderWidth = 0 + "px";
         canvas.appendChild(pixelDiv);
     }
 }
